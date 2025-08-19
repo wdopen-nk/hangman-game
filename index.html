@@ -11,28 +11,36 @@
 <body>
     <div class="game-modal">
         <div class="content">
-            <img src="images/lost.gif" alt="gif">
-            <h4>Game Over</h4>
+            <img src="images/lost.gif" alt="lost gif">
+            <h4>Game Over!</h4>
             <p>The correct word was: <b>rainbow</b></p>
             <button class="play-again">Play Again</button>
         </div>
     </div>
     <div class="container">
         <div class="hangman-box">
-            <img src="images/hangman-0.svg" alt="hangman-img">
+            <img src="images/hangman-0.svg" alt="hangman">
             <h1>Hangman Game</h1>
         </div>
         <div class="game-box">
-            <ul class="word-display"></ul>
+            <ul class="word-display">
+                <li class="letter"></li>
+                <li class="letter guessed"> A</li>
+                <li class="letter"></li>
+                <li class="letter"></li>
+                <li class="letter"></li>
+            </ul>
             <h4 class="hint-text">
                 Hint:
-                <b>Something goes here.</b>
+                <b>Lorem ipsum dolor sit amet consectetur adipisicing elit.</b>
             </h4>
             <h4 class="guesses-text">
                 Incorrect guesses:
                 <b>0 / 6</b>
             </h4>
-            <div class="keyboard"></div>
+            <div class="keyboard">
+                <button>a</button>
+            </div>
         </div>
     </div>
 </body>

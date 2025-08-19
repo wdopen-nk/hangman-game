@@ -9,8 +9,8 @@
 body {
     display: flex;
     align-items: center;
-    padding: 0 10px;
     justify-content: center;
+    padding: 0 10px;
     min-height: 100vh;
     background: #3f16a8;
 }
@@ -20,11 +20,12 @@ body {
     background: #fff;
     display: flex;
     gap: 70px;
+    align-items: flex-end;
     padding: 60px 40px;
     border-radius: 10px;
 }
 
-.hangman-box img {
+.hangman-box {
     max-width: 270px;
 }
 
@@ -37,8 +38,8 @@ body {
 
 .word-display {
     display: flex;
-    list-style: none;
     gap: 10px;
+    list-style: none;
     align-items: center;
     justify-content: center;
 }
@@ -49,8 +50,8 @@ body {
     font-weight: 600;
     text-align: center;
     text-transform: uppercase;
-    border-bottom: 3px solid #000;
     margin-bottom: 40px;
+    border-bottom: 3px solid #000;
 }
 
 .word-display .letter.guessed {
@@ -69,13 +70,13 @@ body {
     font-weight: 600;
 }
 
-.game-box .guessed-text b {
-    color: #ed0e0e;
+.game-box .guesses-text b {
+    color: red;
 }
 
 .game-box .keyboard {
     display: flex;
-    gap: 6px;
+    gap: 5px;
     margin-top: 40px;
     flex-wrap: wrap;
     justify-content: center;
@@ -87,9 +88,9 @@ body {
     font-weight: 600;
     cursor: pointer;
     outline: none;
+    padding: 7px;
     border: none;
-    background-color: #5e63ba;
-    border-radius: 4px;
+    background: #3f16a8;
     text-transform: uppercase;
 }
 
@@ -98,13 +99,8 @@ body {
     width: calc(100% / 9 - 5px);
 }
 
-.keyboard button[disabled] {
-    opacity: 0.6;
-    pointer-events: none;
-}
-
 :where(.game-modal, .keyboard) button:hover {
-    background: #8286c9;
+    background: #7e61c7;
 }
 
 .game-modal {
@@ -113,19 +109,10 @@ body {
     top: 0;
     width: 100%;
     height: 100%;
-    opacity: 0;
-    pointer-events: none;
-    z-index: 999;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
-    transition: opacity 0.4s ease;
     background: rgba(0, 0, 0, 0.6);
-}
-
-.game-modal.show {
-    opacity: 1;
-    pointer-events: auto;
 }
 
 .game-modal .content {
@@ -139,7 +126,6 @@ body {
 
 .game-modal img {
     max-width: 130px;
-    margin-bottom: 20px;
 }
 
 .game-modal h4 {
@@ -153,15 +139,15 @@ body {
 }
 
 .game-modal p b {
-    color: #5e63ba;
+    color: #3f16a8;
     font-weight: 600;
 }
 
 .game-modal button {
-    padding: 8px 12px;
+    padding: 12px 23px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 782px) {
     .container {
         flex-direction: column;
         padding: 30px 15px;
